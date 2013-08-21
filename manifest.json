@@ -1,0 +1,18 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "HP ALM X-origin",
+  "version": "1",
+
+  // Recommended
+  "description": "Removes cross origin HP ALM restriction for specific sites",
+
+  // Optional
+  "author": "Vanuan",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "permissions": ["webRequest", "webRequestBlocking",
+                  "https://qc2d.atlanta.hp.com/"
+  ]
+}
