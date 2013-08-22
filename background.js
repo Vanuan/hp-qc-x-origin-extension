@@ -3,7 +3,7 @@
  *
  * Ideally, we'll want to actually set the header server side instead.
  */
-var allowedOrigins = ['https://localhost:8000', 'http://localhost:8000'];
+var allowedOrigins = ['https://localhost:8000', 'http://localhost:8000', 'http://hp-alm-js.github.io', 'https://hp-alm-js.github.io'];
 var requestHosts = {};
 var types = {
   urls: ['https://qc2d.atlanta.hp.com/qcbin/*'],
