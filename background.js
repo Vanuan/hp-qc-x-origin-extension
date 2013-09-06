@@ -31,7 +31,7 @@ chrome.webRequest.onHeadersReceived.addListener(function onHeadersReceived(resp)
   });
   resp.responseHeaders.push({
     'name': 'Access-Control-Allow-Methods',
-    'value': 'POST, GET, OPTIONS'
+    'value': 'POST, PUT, DELETE, GET, OPTIONS'
   });
   resp.responseHeaders.push({
     'name': 'Access-Control-Allow-Headers',
