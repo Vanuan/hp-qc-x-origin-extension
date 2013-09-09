@@ -6,7 +6,8 @@
 var allowedOrigins = ['https://localhost:8000', 'http://localhost:8000', 'http://hp-alm-js.github.io', 'https://hp-alm-js.github.io'];
 var requestHosts = {};
 var types = {
-  urls: ['https://qc2d.atlanta.hp.com/qcbin/*'],
+  urls: ['https://qc2d.atlanta.hp.com/qcbin/*',
+         'http://qc2d.atlanta.hp.com/qcbin/*'],
   types: ['xmlhttprequest', 'other']
 };
 
@@ -17,10 +18,13 @@ chrome.webRequest.onBeforeSendHeaders.addListener(function onHeadersReceived(det
            requestHosts[det.requestId] = el.value;
        }
    });
-   console.log(det.requestHeaders);
+  console.log(det.requestHeaders);
+  console.log(det.method);
+  console.log("headers sent");
 }, types, ['blocking', 'requestHeaders']);
 
 chrome.webRequest.onHeadersReceived.addListener(function onHeadersReceived(resp) {
+  console.log("headers received");
   var origin = requestHosts[resp.requestId];
   console.log(origin);
   if (allowedOrigins.indexOf(origin) != -1) {

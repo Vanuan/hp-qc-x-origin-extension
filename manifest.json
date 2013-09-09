@@ -10,6 +10,7 @@
     "scripts": ["background.js"]
   },
   "permissions": ["webRequest", "webRequestBlocking",
+                  "http://qc2d.atlanta.hp.com/",
                   "https://qc2d.atlanta.hp.com/"
   ]
 }
