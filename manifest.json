@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "HP ALM X-origin",
-  "version": "1",
+  "version": "2",
 
   "description": "Removes cross origin HP ALM restriction for specific sites",
 
